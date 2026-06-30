@@ -10,14 +10,6 @@
   --footer-bar-color: #000000;
 }
 
-[data-theme=dark] {
-  --bg-color: #000000;
-  --text-color: #ffffff;
-  --text-color-dark: #ffffff;
-  --nav-text-color: #ffffff;
-  --footer-bar-color: #ffffff;
-}
-
 body, html {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -30,7 +22,6 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.3s ease, color 0.3s ease;
   min-height: 100vh;
 }
 
@@ -62,22 +53,6 @@ nav {
 }
 
 .nav-links a:hover {
-  opacity: 0.7;
-}
-
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--nav-text-color);
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.2s ease;
-}
-
-.theme-toggle:hover {
   opacity: 0.7;
 }
 
@@ -211,7 +186,27 @@ nav {
 }
 
 .experience-item {
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
   margin-bottom: 1.25rem;
+}
+
+.company-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+  padding: 3px;
+  background: #ffffff;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.experience-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .experience-header {
@@ -226,17 +221,8 @@ nav {
 .experience-title {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   min-width: 0;
   flex: 1 1 auto;
-}
-
-.company-logo {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  border-radius: 3px;
-  flex-shrink: 0;
 }
 
 .experience-header h3 {
@@ -260,7 +246,6 @@ nav {
   font-size: 14px;
   color: var(--text-color);
   opacity: 0.7;
-  padding-left: 1.875rem;
 }
 
 .experience-blurb {
@@ -269,13 +254,12 @@ nav {
   opacity: 0.6;
   margin-top: 0.25rem;
   line-height: 1.5;
-  padding-left: 1.875rem;
 }
 
 .experience-skills {
   list-style: none;
   margin: 0.5rem 0 0;
-  padding-left: 1.875rem;
+  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
@@ -290,11 +274,6 @@ nav {
   border-radius: 9999px;
   display: inline-block;
   line-height: 1.4;
-}
-
-[data-theme=dark] .experience-skill {
-  color: #999999;
-  background-color: #1a1a1a;
 }
 
 /* ── PROJECTS ────────────────────────────────────── */
@@ -338,11 +317,6 @@ nav {
   padding: 0.15rem 0.6rem;
   border-radius: 9999px;
   display: inline-block;
-}
-
-[data-theme=dark] .tag {
-  color: #999999;
-  background-color: #1a1a1a;
 }
 
 .project-desc {
@@ -440,8 +414,8 @@ nav {
   }
 
   .company-logo {
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
   }
 
   .intro-content {
