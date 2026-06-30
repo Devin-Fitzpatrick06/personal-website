@@ -1,29 +1,180 @@
 <!DOCTYPE html>
+<!-- Deployed via GitHub Pages: push to main branch, Pages auto-builds with no build step required -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devin Fitzpatrick</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devin Fitzpatrick</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Devin Fitzpatrick</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-        <div class="flex-container">
-            <img height="200" width="200" src="https://via.placeholder.com/200" alt="Devin Fitzpatrick">
-            <div class="text-container">
-                <h1>Hey! I'm Devin</h1>
-                <p>I'm a software engineering intern at CLEAR, working on the devex team.
-                     I'm interested in backend development and 
-                     applied machine learning. <a href="https://www.linkedin.com/messaging/compose/?recipient=YOUR-PROFILE-ID, ">Let's chat!</a></p>
-            </div>
+
+  <nav>
+    <ul>
+      <li><a href="#" class="nav-name">Devin Fitzpatrick</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="mailto:devinfitzpatrick@berkeley.edu">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="top">
+    <div class="flex-container">
+      <img class="avatar" src="https://via.placeholder.com/200" alt="Devin Fitzpatrick">
+      <div class="text-container">
+        <h1>Hey, I'm Devin</h1>
+        <p>Software engineer and ML researcher at UC Berkeley. Currently building AI tooling at CLEAR. Interested in backend systems, applied machine learning, and building things that work.</p>
+        <div class="cta-group">
+          <a href="#experience" class="cta-btn primary">View My Work</a>
+          <a href="mailto:devinfitzpatrick@berkeley.edu" class="cta-btn secondary">Get in Touch</a>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
+
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="company">CLEAR</span>
+        <span class="role">Software Engineering Intern</span>
+        <span class="date-loc">June 2026 – Present &nbsp;·&nbsp; New York City, NY</span>
+      </div>
+      <div class="card-body">
+        <p>Building an AI code reviewer that automatically drops inline PR comments on GitHub — it runs on Kubernetes and uses Claude/AWS Bedrock under the hood, cutting review time by 60% for 5+ engineering teams.</p>
+        <div class="tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">AWS Bedrock</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">GitHub Apps</span>
+          <span class="tag">Claude AI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="company">AMD</span>
+        <span class="role">Software Engineering Intern (Contract)</span>
+        <span class="date-loc">Jan 2026 – May 2026 &nbsp;·&nbsp; Berkeley, CA</span>
+      </div>
+      <div class="card-body">
+        <p>Built compliance tooling that mapped AMD's chip-level memory encryption tech to SOC2 security requirements — essentially translating low-level hardware features into auditable evidence.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">SOC2</span>
+          <span class="tag">Security</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="company">Launchpad</span>
+        <span class="role">Machine Learning Engineer</span>
+        <span class="date-loc">Sep 2025 – Present &nbsp;·&nbsp; Berkeley, CA</span>
+      </div>
+      <div class="card-body">
+        <p>Training robots and building computer vision pipelines as an ML engineer — using PyTorch, imitation learning, and fine-tuned foundation models across 3+ projects.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Imitation Learning</span>
+          <span class="tag">Foundation Models</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="company">Airbnb</span>
+        <span class="role">Software Engineering Intern (Contract)</span>
+        <span class="date-loc">Feb 2025 – May 2025 &nbsp;·&nbsp; San Francisco, CA</span>
+      </div>
+      <div class="card-body">
+        <p>Rebuilt parts of Airbnb's payments infrastructure and wrote load-testing tools to simulate 10,000+ concurrent users — also cut debugging time by 40% with new CI/CD test tooling.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">gRPC</span>
+          <span class="tag">SQL</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="company">TurbineOne</span>
+        <span class="role">Operations Intern</span>
+        <span class="date-loc">Jun 2025 – Aug 2025 &nbsp;·&nbsp; San Francisco, CA</span>
+      </div>
+      <div class="card-body">
+        <p>Automated a ton of manual ops reporting — built Python ETL pipelines and a React/Flask dashboard that centralized KPIs for the whole team.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">React</span>
+          <span class="tag">Flask</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">ETL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="company">Whisk — Matcha Making Robot</span>
+        <span class="date-loc">May 2026</span>
+      </div>
+      <div class="card-body">
+        <p>A robot arm that makes matcha from scratch — controlled by a Gemini AI agent using real-time computer vision to locate tools, with inverse kinematics for precise manipulation.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">MuJoCo</span>
+          <span class="tag">Robotics</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="company">Oculy</span>
+        <span class="date-loc">Dec 2025</span>
+      </div>
+      <div class="card-body">
+        <p>Eye-tracking software that classifies gaze direction from raw EEG brain signals using a 1D CNN — lets you control a computer with just your eyes, with sub-50ms latency.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">1D CNN</span>
+          <span class="tag">EEG</span>
+          <span class="tag">Real-time ML</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://github.com/Devin-Fitzpatrick06" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer-dot">·</span>
+      <a href="https://linkedin.com/in/devinfitzpat" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="footer-dot">·</span>
+      <a href="https://drive.google.com/file/d/1EOb_14dhQaxKOla9SbohnIaeN29N5MEQ/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+    </div>
+    <p class="footer-copy">© 2026 Devin Fitzpatrick</p>
+  </footer>
+
 </body>
 </html>
