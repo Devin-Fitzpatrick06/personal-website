@@ -1,220 +1,228 @@
 <!DOCTYPE html>
-<!-- Deployed via GitHub Pages or Vercel: push to main, no build step needed -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devin Fitzpatrick</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Read saved theme before render to avoid flash -->
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('theme');
+        const theme = saved === 'dark' || saved === 'light' ? saved : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (_) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="#" class="nav-brand">Devin Fitzpatrick</a>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="mailto:devinfitzpatrick@berkeley.edu">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="mailto:devinfitzpatrick@berkeley.edu">Contact Me</a>
+  </div>
+  <button class="theme-toggle" aria-label="Toggle dark mode">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</nav>
 
-  <!-- Dark hero — sets the Starboy tone -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="hero-eyebrow">UC Berkeley &nbsp;·&nbsp; CS + Business</p>
-        <h1>Hey, I'm Devin</h1>
-        <p class="hero-sub">Software engineer and ML researcher. Currently building AI developer tooling at CLEAR. Interested in backend systems, applied machine learning, and building things that actually work.</p>
-        <div class="cta-group">
-          <a href="#experience" class="btn btn-primary">View My Work</a>
-          <a href="mailto:devinfitzpatrick@berkeley.edu" class="btn btn-ghost">Get in Touch</a>
+<div class="page-transition page-transition--in">
+  <main class="container">
+
+    <section class="intro">
+      <div class="intro-content">
+        <div class="intro-text">
+          <h1>Hey! I'm Devin 👋</h1>
+          <p class="status">
+            <span class="status-dot"></span>Currently in NYC, building AI developer tooling at CLEAR
+          </p>
+          <p class="chat-cta">
+            I'm interested in backend systems, applied machine learning, and building things that actually ship. <a href="https://www.linkedin.com/in/devinfitzpat" target="_blank" rel="noopener noreferrer">Let's chat!</a>
+          </p>
+          <p>Computer Science + Business Administration student at UC Berkeley, graduating May 2028.</p>
         </div>
+        <img
+          src="https://via.placeholder.com/240"
+          alt="Devin Fitzpatrick"
+          width="240"
+          height="240"
+          class="intro-headshot"
+        >
       </div>
-      <div class="hero-photo-wrap">
-        <img src="https://via.placeholder.com/220x220" alt="Devin Fitzpatrick" class="hero-photo">
+    </section>
+
+    <section class="experience">
+      <h2>Experience</h2>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div class="experience-title">
+            <img src="https://logo.clearbit.com/clearme.com" alt="CLEAR" class="company-logo" onerror="this.style.visibility='hidden'">
+            <h3>Software Engineering Intern</h3>
+          </div>
+          <span class="experience-date">Jun 2026 – Present</span>
+        </div>
+        <p class="experience-company">CLEAR</p>
+        <p class="experience-blurb">Building an AI code reviewer that automatically drops inline PR comments on GitHub — runs on Kubernetes and uses Claude/AWS Bedrock under the hood, cutting review time by 60% across 5+ engineering teams.</p>
+        <ul class="experience-skills" aria-label="Skills">
+          <li class="experience-skill">TypeScript</li>
+          <li class="experience-skill">AWS Bedrock</li>
+          <li class="experience-skill">Kubernetes</li>
+          <li class="experience-skill">GitHub Apps</li>
+          <li class="experience-skill">Claude AI</li>
+        </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- Light content — clean and readable -->
-  <main>
-    <div class="content-wrap">
-
-      <section id="experience">
-        <h2 class="section-label">Experience</h2>
-
-        <div class="entry">
-          <div class="entry-aside">
-            <div class="logo-wrap" data-initial="C">
-              <img src="https://logo.clearbit.com/clearme.com" alt="CLEAR" class="logo-img">
-            </div>
-            <span class="entry-dates">Jun 2026<br>Present</span>
+      <div class="experience-item">
+        <div class="experience-header">
+          <div class="experience-title">
+            <img src="https://logo.clearbit.com/amd.com" alt="AMD" class="company-logo" onerror="this.style.visibility='hidden'">
+            <h3>Software Engineering Intern (Contract)</h3>
           </div>
-          <div class="entry-body">
-            <p class="entry-company">CLEAR</p>
-            <p class="entry-role">Software Engineering Intern &nbsp;·&nbsp; New York City, NY</p>
-            <p class="entry-desc">Building an AI code reviewer that automatically drops inline PR comments on GitHub — runs on Kubernetes, uses Claude and AWS Bedrock under the hood, and cut review time by 60% across 5+ engineering teams.</p>
-            <div class="tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">AWS Bedrock</span>
-              <span class="tag">Kubernetes</span>
-              <span class="tag">GitHub Apps</span>
-              <span class="tag">Claude AI</span>
-            </div>
-          </div>
+          <span class="experience-date">Jan 2026 – May 2026</span>
         </div>
+        <p class="experience-company">AMD</p>
+        <p class="experience-blurb">Built compliance tooling that mapped AMD's chip-level memory encryption tech to SOC2 security requirements — translating low-level hardware features into auditable evidence across 5 security personas.</p>
+        <ul class="experience-skills" aria-label="Skills">
+          <li class="experience-skill">Python</li>
+          <li class="experience-skill">Pandas</li>
+          <li class="experience-skill">Kubernetes</li>
+          <li class="experience-skill">SOC2</li>
+          <li class="experience-skill">Security</li>
+        </ul>
+      </div>
 
-        <div class="entry">
-          <div class="entry-aside">
-            <div class="logo-wrap" data-initial="A">
-              <img src="https://logo.clearbit.com/amd.com" alt="AMD" class="logo-img">
-            </div>
-            <span class="entry-dates">Jan 2026<br>May 2026</span>
+      <div class="experience-item">
+        <div class="experience-header">
+          <div class="experience-title">
+            <img src="https://logo.clearbit.com/berkeleylaunchpad.org" alt="Launchpad" class="company-logo" onerror="this.style.visibility='hidden'">
+            <h3>Machine Learning Engineer</h3>
           </div>
-          <div class="entry-body">
-            <p class="entry-company">AMD</p>
-            <p class="entry-role">Software Engineering Intern (Contract) &nbsp;·&nbsp; Berkeley, CA</p>
-            <p class="entry-desc">Built compliance tooling that mapped AMD's chip-level memory encryption tech to SOC2 security requirements — translating low-level hardware features into auditable evidence across 5 security personas.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Kubernetes</span>
-              <span class="tag">SOC2</span>
-              <span class="tag">Security</span>
-            </div>
-          </div>
+          <span class="experience-date">Sep 2025 – Present</span>
         </div>
+        <p class="experience-company">Launchpad</p>
+        <p class="experience-blurb">Training robots and building computer vision pipelines as an ML engineer — using PyTorch, imitation learning, and fine-tuned foundation models across 3+ projects.</p>
+        <ul class="experience-skills" aria-label="Skills">
+          <li class="experience-skill">Python</li>
+          <li class="experience-skill">PyTorch</li>
+          <li class="experience-skill">Computer Vision</li>
+          <li class="experience-skill">Imitation Learning</li>
+          <li class="experience-skill">Foundation Models</li>
+        </ul>
+      </div>
 
-        <div class="entry">
-          <div class="entry-aside">
-            <div class="logo-wrap" data-initial="L">
-              <img src="https://logo.clearbit.com/berkeleylaunchpad.org" alt="Launchpad" class="logo-img">
-            </div>
-            <span class="entry-dates">Sep 2025<br>Present</span>
+      <div class="experience-item">
+        <div class="experience-header">
+          <div class="experience-title">
+            <img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb" class="company-logo" onerror="this.style.visibility='hidden'">
+            <h3>Software Engineering Intern (Contract)</h3>
           </div>
-          <div class="entry-body">
-            <p class="entry-company">Launchpad</p>
-            <p class="entry-role">Machine Learning Engineer &nbsp;·&nbsp; Berkeley, CA</p>
-            <p class="entry-desc">Training robots and building computer vision pipelines as an ML engineer — using PyTorch, imitation learning, and fine-tuned foundation models across 3+ projects.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Imitation Learning</span>
-              <span class="tag">Foundation Models</span>
-            </div>
-          </div>
+          <span class="experience-date">Feb 2025 – May 2025</span>
         </div>
+        <p class="experience-company">Airbnb</p>
+        <p class="experience-blurb">Rebuilt parts of Airbnb's payments infrastructure and wrote load-testing tools to simulate 10,000+ concurrent users — also cut debugging time by 40% with new CI/CD test tooling.</p>
+        <ul class="experience-skills" aria-label="Skills">
+          <li class="experience-skill">Python</li>
+          <li class="experience-skill">Flask</li>
+          <li class="experience-skill">REST APIs</li>
+          <li class="experience-skill">gRPC</li>
+          <li class="experience-skill">SQL</li>
+          <li class="experience-skill">CI/CD</li>
+        </ul>
+      </div>
 
-        <div class="entry">
-          <div class="entry-aside">
-            <div class="logo-wrap" data-initial="A">
-              <img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb" class="logo-img">
-            </div>
-            <span class="entry-dates">Feb 2025<br>May 2025</span>
+      <div class="experience-item">
+        <div class="experience-header">
+          <div class="experience-title">
+            <img src="https://logo.clearbit.com/turbineone.com" alt="TurbineOne" class="company-logo" onerror="this.style.visibility='hidden'">
+            <h3>Operations Intern</h3>
           </div>
-          <div class="entry-body">
-            <p class="entry-company">Airbnb</p>
-            <p class="entry-role">Software Engineering Intern (Contract) &nbsp;·&nbsp; San Francisco, CA</p>
-            <p class="entry-desc">Rebuilt parts of Airbnb's payments infrastructure and wrote load-testing tools to simulate 10,000+ concurrent users — also cut debugging time by 40% with new CI/CD test tooling.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Flask</span>
-              <span class="tag">REST APIs</span>
-              <span class="tag">gRPC</span>
-              <span class="tag">SQL</span>
-              <span class="tag">CI/CD</span>
-            </div>
-          </div>
+          <span class="experience-date">Jun 2025 – Aug 2025</span>
         </div>
+        <p class="experience-company">TurbineOne</p>
+        <p class="experience-blurb">Automated a ton of manual ops reporting — built Python ETL pipelines and a React/Flask dashboard that centralized KPIs for the whole team.</p>
+        <ul class="experience-skills" aria-label="Skills">
+          <li class="experience-skill">Python</li>
+          <li class="experience-skill">React</li>
+          <li class="experience-skill">Flask</li>
+          <li class="experience-skill">PostgreSQL</li>
+          <li class="experience-skill">ETL</li>
+        </ul>
+      </div>
 
-        <div class="entry">
-          <div class="entry-aside">
-            <div class="logo-wrap" data-initial="T">
-              <img src="https://logo.clearbit.com/turbineone.com" alt="TurbineOne" class="logo-img">
-            </div>
-            <span class="entry-dates">Jun 2025<br>Aug 2025</span>
-          </div>
-          <div class="entry-body">
-            <p class="entry-company">TurbineOne</p>
-            <p class="entry-role">Operations Intern &nbsp;·&nbsp; San Francisco, CA</p>
-            <p class="entry-desc">Automated a ton of manual ops reporting — built Python ETL pipelines and a React/Flask dashboard that centralized KPIs for the whole team.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">React</span>
-              <span class="tag">Flask</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">ETL</span>
-            </div>
-          </div>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <div class="project-item">
+        <div class="project-header">
+          <h3>Whisk — Matcha Making Robot</h3>
+          <span class="experience-date">May 2026</span>
         </div>
-
-      </section>
-
-      <section id="projects">
-        <h2 class="section-label">Projects</h2>
-
-        <div class="entry">
-          <div class="entry-aside">
-            <div class="logo-wrap project-logo" data-initial="W">
-              <span class="project-emoji">🍵</span>
-            </div>
-            <span class="entry-dates">May 2026</span>
-          </div>
-          <div class="entry-body">
-            <p class="entry-company">Whisk — Matcha Making Robot</p>
-            <p class="entry-role">Python · PyTorch · Gemini · OpenCV · MuJoCo</p>
-            <p class="entry-desc">A robot arm that makes matcha from scratch — controlled by a Gemini AI agent using real-time computer vision to locate tools, with inverse kinematics for precise manipulation.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Gemini</span>
-              <span class="tag">OpenCV</span>
-              <span class="tag">MuJoCo</span>
-              <span class="tag">Robotics</span>
-            </div>
-          </div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">MuJoCo</span>
+          <span class="tag">Robotics</span>
         </div>
+        <p class="project-desc">A robot arm that makes matcha from scratch — controlled by a Gemini AI agent using real-time computer vision to locate tools, with inverse kinematics for precise manipulation and 90%+ task completion.</p>
+      </div>
 
-        <div class="entry">
-          <div class="entry-aside">
-            <div class="logo-wrap project-logo" data-initial="O">
-              <span class="project-emoji">👁</span>
-            </div>
-            <span class="entry-dates">Dec 2025</span>
-          </div>
-          <div class="entry-body">
-            <p class="entry-company">Oculy</p>
-            <p class="entry-role">Python · PyTorch · EEG · CNN</p>
-            <p class="entry-desc">Eye-tracking software that classifies gaze direction from raw EEG brain signals using a 1D CNN — lets you control a computer with just your eyes, with sub-50ms latency.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">1D CNN</span>
-              <span class="tag">EEG</span>
-              <span class="tag">Real-time ML</span>
-            </div>
-          </div>
+      <div class="project-item">
+        <div class="project-header">
+          <h3>Oculy</h3>
+          <span class="experience-date">Dec 2025</span>
         </div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">1D CNN</span>
+          <span class="tag">EEG</span>
+          <span class="tag">Real-time ML</span>
+        </div>
+        <p class="project-desc">Eye-tracking software that classifies gaze direction from raw EEG brain signals using a 1D CNN — lets you control a computer with just your eyes, with sub-50ms latency and 85%+ classification accuracy.</p>
+      </div>
 
-      </section>
+    </section>
 
-    </div>
+    <footer class="main-footer">
+      <div class="social-links">
+        <a href="https://github.com/Devin-Fitzpatrick06" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/devinfitzpat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://drive.google.com/file/d/1EOb_14dhQaxKOla9SbohnIaeN29N5MEQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="resume-link">resume</a>
+      </div>
+      <p class="copyright">updated 06/30/2026</p>
+    </footer>
+
   </main>
+</div>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="https://github.com/Devin-Fitzpatrick06" target="_blank" rel="noopener">GitHub</a>
-        <span class="dot">·</span>
-        <a href="https://linkedin.com/in/devinfitzpat" target="_blank" rel="noopener">LinkedIn</a>
-        <span class="dot">·</span>
-        <a href="https://drive.google.com/file/d/1EOb_14dhQaxKOla9SbohnIaeN29N5MEQ/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
-      </div>
-      <p class="footer-copy">© 2026 Devin Fitzpatrick</p>
-    </div>
-  </footer>
+<div class="footer-bar"></div>
+
+<script>
+  document.querySelector('.theme-toggle').addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (_) {}
+  });
+</script>
 
 </body>
 </html>
