@@ -79,6 +79,7 @@ nav {
 
 .intro {
   margin-bottom: 3rem;
+  padding-top: 2rem;
 }
 
 .intro-content {
@@ -118,8 +119,9 @@ nav {
 }
 
 .status {
-  position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 13px;
   font-weight: 400;
   color: var(--text-color);
@@ -128,9 +130,6 @@ nav {
 }
 
 .status-dot {
-  position: absolute;
-  left: -0.95rem;
-  top: 0.55em;
   width: 7px;
   height: 7px;
   flex-shrink: 0;
